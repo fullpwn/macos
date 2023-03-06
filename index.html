@@ -17,6 +17,7 @@ h1, h2, h3, p, a {
 }
 </style>
 <body>
+    <pre id="out"></pre>
     <center><h1>Download macOS</h1></center>
     <center><h2>Direct downloads</h2></center>
     <br>
@@ -78,5 +79,17 @@ h1, h2, h3, p, a {
     <a href="https://archive.org/download/macos-internet-recovery-images/Mountain%20Lion/RecoveryImage.dmg">OS X Mountain Lion 10.8</a>
     <br>
     <a href="https://archive.org/download/macos-internet-recovery-images/Lion/RecoveryImage.dmg">OS X Lion 10.7</a>
+    
+    
+    <script>
+var is_OSX = /(Mac)/i.test(navigator.platform);
+var is_Mac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+
+/* Output */
+var out = document.getElementById('out');
+if (!is_OSX) out.innerHTML += "This NOT a Mac or an iOS Device!";
+if (is_Mac) out.innerHTML += "This is a Mac Computer!\n";
+out.innerHTML += "\nPlatform: " + navigator.platform;
+    </script>
 </body>
 </html>
