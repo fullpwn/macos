@@ -24,9 +24,9 @@ var is_OSX = /(Mac)/i.test(navigator.platform);
 var is_Mac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
 
 /* Output */
-var displaybody = document.getElementById('content');
+
 if (!is_OSX) location.href = "https://macos.fullpwn.net/unsupported"
-if (is_Mac) displaybody.style.display = "block";
+if (is_Mac) var displaybody = document.getElementById('content'); displaybody.style.display = "block";
     </script>
 <body id="content" class="contents">
     <center><h1>macOS Software Store</h1></center>
